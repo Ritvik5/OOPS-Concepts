@@ -1,10 +1,34 @@
 ﻿namespace OOPSConcept
 {
-    internal class Program
+    public class Program
     {
+
+        // instance variable
+        int a = 80;
+
+        // static variable
+        static int b = 40;
+
+        // Constant variables
+        const float max = 50;
+
+        // readonly variables
+        readonly int k;
+
+        public Program()
+        {
+
+            // initializing readonly
+            // variable k
+            this.k = 90;
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Object Oriented Programing!!!\n");
+
+            //local variable
+            int c = 50;
+
             //Patient patient = new Patient();
             //patient.GetName = "Ajay";
             //patient.GetAddress = "127.0.0.1";
@@ -98,26 +122,34 @@
 
             // object having more than one form here.
 
-            Company com = new Employees();
-            com.Name = "Rahul";
-            com.Address = "Bangalore";
-            com.ProductAmount = 100;
+            //Company com = new Employees();
+            //com.Name = "Rahul";
+            //com.Address = "Bangalore";
+            //com.ProductAmount = 100;
 
-            Console.WriteLine("Emp Name = "+com.Name+"\nEmp Address = "+com.Address+"\nCompany Product Amount = "+com.ProductAmount
-                +"\nProduct Amount After distcount = "+com.CalculateDiscount()+"\n");
+            //Console.WriteLine("Emp Name = "+com.Name+"\nEmp Address = "+com.Address+"\nCompany Product Amount = "+com.ProductAmount
+            //    +"\nProduct Amount After distcount = "+com.CalculateDiscount()+"\n");
 
-            Company man = new Managers();
-            man.Name = "Rituraj";
-            man.Address = "Bangalore";
-            man.ProductAmount = 100;
+            //Company man = new Managers();
+            //man.Name = "Rituraj";
+            //man.Address = "Bangalore";
+            //man.ProductAmount = 100;
 
-            Console.WriteLine("Emp Name = " + man.Name + "\nEmp Address = " + man.Address + "\nCompany Product Amount = " + man.ProductAmount
-                + "\nProduct Amount After distcount = " + man.CalculateDiscount());
+            //Console.WriteLine("Emp Name = " + man.Name + "\nEmp Address = " + man.Address + "\nCompany Product Amount = " + man.ProductAmount
+            //    + "\nProduct Amount After distcount = " + man.CalculateDiscount());
 
-            Hospital obj = new Hospital();
-            obj.Salary = 100;
+            //Hospital obj = new Hospital();
+            //obj.Salary = 100;
 
-            Console.WriteLine("\nTotal Salary for Nurse is "+obj.TotalSalary(100)+"\nTotal Salary for Doctor is : "+obj.TotalSalary(100,50));
+            //Console.WriteLine("\nTotal Salary for Nurse is "+obj.TotalSalary(100)+"\nTotal Salary for Doctor is : "+obj.TotalSalary(100,50));
+
+            Program obj = new Program();
+
+            Console.WriteLine("The value of a is = " + obj.a);
+            Console.WriteLine("The value of b is = " + Program.b);
+            Console.WriteLine("The value of max is = " + Program.max);
+            Console.WriteLine("The value of k is = " + obj.k);
+            Console.WriteLine("The value of c is = " + c);
         }
     }
 }
